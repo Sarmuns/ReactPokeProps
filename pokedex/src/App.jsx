@@ -1,11 +1,12 @@
 import Card from './components/Card'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import getPokemon from './API/getPokemon';
 
 const App = () => {
   const pokemons = getPokemon();
   const [reset, setReset] = useState(false);
   const [reverse, setReverse] = useState(false);
+  const [change, setChange] = useState(false);
 
   const resetClick = () => {
     setReset(!reset)
@@ -14,6 +15,22 @@ const App = () => {
   const changeState = () => {
     setReverse(!reverse)
   }
+
+
+  const [randomNumbers, setRandomNumbers] = useState([]);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const newRandomNumber = Math.floor(Math.random() * 151) + 1;
+      if (randomNumbers.includes(newRandomNumber)) {
+        return;
+      }
+      setRandomNumbers(prevNumbers => [...prevNumbers, newRandomNumber])
+    }, 2000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
 
   return (
     <div className='bg-gray-900'>
@@ -25,9 +42,13 @@ const App = () => {
 
         {pokemons.map((pokemon, index) =>
         (
-          <Card reset={reset} reverse={reverse} key={index} pokemon={pokemon.name} />)
+
+          randomNumbers.includes(index)
+            ? <Card forceShiny={true} reset={reset} reverse={reverse} key={index} pokemon={pokemon.name} />
+            : <Card forceShiny={false} reset={reset} reverse={reverse} key={index} pokemon={pokemon.name} />
+
         )
-        }
+        )}
 
 
       </div>

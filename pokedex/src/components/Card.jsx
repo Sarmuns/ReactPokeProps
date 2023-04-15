@@ -5,7 +5,7 @@ import axios from 'axios';
 
 
 
-const Card = ({ pokemon, reset, reverse }) => {
+const Card = ({ pokemon, reset, reverse, forceShiny }) => {
     const [isLoading, setIsLoading] = useState(true);
     const [pokemonData, setPokemonData] = useState();
     const [pokeType, setPokeType] = useState("grass");
@@ -32,6 +32,14 @@ const Card = ({ pokemon, reset, reverse }) => {
         fetchData();
 
     }, []);
+
+    useEffect(() => {
+        if (forceShiny) {
+            setImage(shiny)
+        } else {
+            setImage(def)
+        }
+    }, [forceShiny])
 
     useEffect(() => {
         handleImageChange();
@@ -74,10 +82,10 @@ const Card = ({ pokemon, reset, reverse }) => {
             steel: "bg-gray-500",
             flying: "bg-blue-500",
         };
-    
+
         return colors[pokeType] || "bg-gray-400";
     };
-    
+
 
 
 
