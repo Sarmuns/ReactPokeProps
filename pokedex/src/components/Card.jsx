@@ -83,13 +83,13 @@ const Card = ({ pokemon, reset, reverse }) => {
 
 
     return (
-        <div className='flex flex-col gap-3 border-2 justify-center transition duration-1000 hover:scale-110'>
+        <div className='flex flex-col gap-3 border-2 justify-center transition duration-1000 hover:scale-110 '>
             {isLoading ?
                 <p>Loading...</p>
                 :
-                <div className={`flex flex-col w-40 h-20 ${colorBackground(pokeType)}`}>
+                <div className={`flex flex-col w-80 h-40 ${colorBackground(pokeType)}`}>
                     <div className='flex justify-center '>
-                        <img className={`w-12 h-12 ${clicked} hover:scale-125`} src={image} alt={pokemonData.name} onClick={handleImageChange} />
+                        <img className={`w-24 h-24 ${clicked} hover:scale-125`} src={image} alt={pokemonData.name} onClick={handleImageChange} />
                     </div>
                     <h1 className="text-center">{pokemonData.name.charAt(0).toUpperCase() + pokemonData.name.slice(1)}</h1>
                 </div>
