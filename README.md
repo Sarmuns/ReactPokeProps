@@ -2,7 +2,7 @@
 
 Este projeto em React é uma listagem dos primeiros 151 Pokémons em cards com cores baseadas em seus atributos, utilizando a PokeAPI. Quando um card é clicado, o sprite do Pokémon é alterado para sua versão shiny. O projeto também possui dois botões, um para resetar todos os Pokémons para seu estado normal e outro para inverter entre os estados normal e shiny.
 
-## Como executar o projeto
+## Como executar o projeto 
 
 1. Clone o repositório em sua máquina local:
 
