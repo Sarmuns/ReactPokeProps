@@ -11,7 +11,7 @@ Este projeto em React é uma listagem dos primeiros 151 Pokémons em cards com c
 2. Instale as dependências do projeto:
 
 ```
-cd pokecards
+cd pokedex
 
 yarn install
 ```
