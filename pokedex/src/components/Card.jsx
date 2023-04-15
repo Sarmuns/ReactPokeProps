@@ -18,7 +18,7 @@ const Card = ({ pokemon, reset, reverse }) => {
         const fetchData = async () => {
             setIsLoading(true);
             try {
-                const response = await axios.get(`https:pokeapi.co/api/v2/pokemon/${pokemon}/`);
+                const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon}/`);
                 setPokemonData(response.data);
                 setDef(response.data["sprites"].front_default);
                 setShiny(response.data["sprites"].front_shiny);
