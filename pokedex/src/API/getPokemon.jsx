@@ -6,7 +6,7 @@ const getPokemon = () => {
 
   useEffect(() => {
     axios
-      .get('https://pokeapi.co/api/v2/pokemon?limit=151')
+      .get('https://pokeapi.co/api/v2/pokemon?limit=0487')
       .then((res) => {
         setPokemon(res.data.results);
       })

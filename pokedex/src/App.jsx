@@ -21,7 +21,7 @@ const App = () => {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      const newRandomNumber = Math.floor(Math.random() * 151) + 1;
+      const newRandomNumber = Math.floor(Math.random() * 487) + 1;
       if (randomNumbers.includes(newRandomNumber)) {
         return;
       }
@@ -35,8 +35,8 @@ const App = () => {
   return (
     <div className='bg-gray-900'>
       <div className='flex spacex-2 py-2 px-2 justify-between w-1/6'>
-        <button onClick={resetClick} className='bg-blue-500 hover:bg-blue-700 hover:border-2  border-neutral-950  text-white font-bold py-2 px-4 rounded '>Reset</button>
-        <button onClick={changeState} className='bg-blue-500 hover:bg-blue-700 hover:border-2  border-neutral-950 text-white font-bold py-2 px-4 rounded '>Switch</button>
+        <button onClick={resetClick} className='bg-blue-500 hover:bg-blue-700 border-neutral-950  text-white font-bold py-2 px-4 rounded '>Reset</button>
+        <button onClick={changeState} className='bg-blue-500 hover:bg-blue-700 border-neutral-950 text-white font-bold py-2 px-4 rounded '>Switch</button>
       </div>
       <div className='mt-4 flex flex-wrap gap-3 mx-auto justify-center'>
 
