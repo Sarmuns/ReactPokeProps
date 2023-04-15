@@ -83,7 +83,7 @@ const Card = ({ pokemon, reset, reverse }) => {
 
 
     return (
-        <div className='flex flex-col gap-3 border-2 justify-center transition duration-300 hover:scale-110'>
+        <div className='flex flex-col gap-3 border-2 justify-center transition duration-1000 hover:scale-110'>
             {isLoading ?
                 <p>Loading...</p>
                 :
