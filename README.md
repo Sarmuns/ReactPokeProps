@@ -1,4 +1,4 @@
-# PokeCards
+# PokeCards [![Netlify Status](https://api.netlify.com/api/v1/badges/790ccc2e-ee8f-46dd-9a51-12c788aa6ca7/deploy-status)](https://app.netlify.com/sites/dulcet-meringue-f07dc0/deploys) [Link Acesso](https://dulcet-meringue-f07dc0.netlify.app/)
 
 Este projeto em React é uma listagem dos primeiros 151 Pokémons em cards com cores baseadas em seus atributos, utilizando a PokeAPI. Quando um card é clicado, o sprite do Pokémon é alterado para sua versão shiny. O projeto também possui dois botões, um para resetar todos os Pokémons para seu estado normal e outro para inverter entre os estados normal e shiny.
 
